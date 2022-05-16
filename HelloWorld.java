@@ -84,5 +84,31 @@ public class HelloWorld {
 
 //        two errors viewing are
 
+//        TODO: Rewrite the following expressions using the relevant shorthand assignment operators:
+
+        int x = 4;
+//        x = x + 5;
+            x += 5;
+
+        int x = 3;
+        int y = 4;
+//            y = y * x;
+        y *= x;
+
+        int x = 10;
+        int y = 2;
+//        x = x / y;
+        x /= y;
+//        y = y - x;
+        y -= x;
+
+//        TODO: What happens if you assign a value to a numerical variable that is larger
+//         (or smaller) than the type can hold? What happens if you increment a numeric variable past the type's capacity?
+
+        byte tooSmall = (byte) 32768;
+
+//        You can either explicitly cast to a data type of lesser precision (and potentially lose data)
+//        Or redefine the variable using the more appropriate data type.
+
     }
 }
