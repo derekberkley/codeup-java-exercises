@@ -71,14 +71,14 @@ public class HelloWorld {
 
 //        TODO: Object is the most generic type in Java. You can assign any value to a variable of type
 //         Object. What do you think will happen when the following code is run?
-
-        String theNumberThree = "three";
-        Object o = theNumberThree;
-        int three = (int) o;
+//
+//        String theNumberThree = "three";
+//        Object o = theNumberThree;
+//        int three = (int) o;
 
 //        You may be able to assign any value to an object, but you can't "cast" to the integer class
 
-        int three = (int) "three";
+//        int three = (int) "three";
 
         //can't convert string to int (incompatible types_
 
@@ -86,21 +86,21 @@ public class HelloWorld {
 
 //        TODO: Rewrite the following expressions using the relevant shorthand assignment operators:
 
-        int x = 4;
-//        x = x + 5;
-            x += 5;
+//        int x = 4;
+////        x = x + 5;
+//            x += 5;
+//
+//        int x = 3;
+//        int y = 4;
+////            y = y * x;
+//        y *= x;
 
-        int x = 3;
-        int y = 4;
-//            y = y * x;
-        y *= x;
-
-        int x = 10;
-        int y = 2;
-//        x = x / y;
-        x /= y;
-//        y = y - x;
-        y -= x;
+//        int x = 10;
+//        int y = 2;
+////        x = x / y;
+//        x /= y;
+////        y = y - x;
+//        y -= x;
 
 //        TODO: What happens if you assign a value to a numerical variable that is larger
 //         (or smaller) than the type can hold? What happens if you increment a numeric variable past the type's capacity?
