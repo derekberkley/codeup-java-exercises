@@ -1,9 +1,11 @@
+package src;
+
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class StringExercise {
 
-//TODO: Create a class named StringExercise with a main method.
+//TODO: Create a class named src.StringExercise with a main method.
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

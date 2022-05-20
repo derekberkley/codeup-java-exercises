@@ -1,3 +1,5 @@
+package src;
+
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -7,7 +9,7 @@ public class Bob {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Hi, I'm Bob.");
+        System.out.println("Hi, I'm src.Bob.");
         String userInput;
 
         do {
@@ -51,4 +53,4 @@ public class Bob {
 //        return;
 //    };
 
-} //End Public Class Bob
+} //End Public Class src.Bob
