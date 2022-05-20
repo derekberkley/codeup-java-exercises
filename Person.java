@@ -1,14 +1,15 @@
 public class Person {
 
-    private String name = "Derek";
+    private static String name;
 
     public static void main(String[] args)  {
-//        getName(name);
+
+          getName(name);
 //        setName("Berkley");
 //        sayHello(name);
     }
 
-    public String getName(String name){
+    public static String getName(String name){
 //TODO: return the person's name
         System.out.println(name);
         return name;

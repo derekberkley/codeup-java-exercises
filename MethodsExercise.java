@@ -13,6 +13,8 @@ public class MethodsExercise {
         multLoop(5, 6);
         multRec(4, 5);
 //        division(9, 0); Error: Exception in thread "main" java.lang.ArithmeticException: / by zero
+        System.out.println("Enter a number between 1 and 10: ");
+        int userInput = getInteger(1, 10);
     }
 
 //TODO: Create four separate methods. Each will perform a different arithmetic operation.
@@ -59,7 +61,21 @@ public class MethodsExercise {
         }
     }
 
+// TODO: Create a method that validates that user input is in a certain range and returns
+//  that input as an integer if it is within the given range. If not, prompt the user to
+//  input their number again until the input is within range.
 
+    public static int getInteger(int min, int max) {
+        Scanner scanner = new Scanner(System.in);
+        int userInput = scanner.nextInt();
+
+        if (userInput < min || userInput > max) {
+            System.out.println("Wrong input. Please enter a # between 1 and 10.");
+            userInput = getInteger(1, 10);
+        }
+        System.out.println("userInput: " + userInput);
+        return userInput;
+    }
 
 }; //End public class methodExercise
 
