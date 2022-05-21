@@ -19,7 +19,7 @@ public class MethodsExercise {
         int userInput = getInteger(1, 10);
 
         System.out.println("Enter another number to factorialize between 1 and 10: ");
-        int userInput = factorial(1, 10);
+//        int userInput = factorial(1, 10);
     }
 
 //TODO: Create four separate methods. Each will perform a different arithmetic operation.
@@ -81,20 +81,20 @@ public class MethodsExercise {
         System.out.println("userInput: " + userInput);
         return userInput;
     }
-
-    public static int factorial(int min, int max) {
-        Scanner scanner = new Scanner(System.in);
-        int num = scanner.nextInt();
-
-        if (num < min || num > max) {
-            System.out.println("Wrong input. Please enter a # between 1 and 10.");
-            num = factorial(1, 10);
-        }
-        int c = num
-        System.out.println("factorial: " + num);
-        return num;
-
-    }
+//
+//    public static int factorial(int min, int max) {
+//        Scanner scanner = new Scanner(System.in);
+//        int num = scanner.nextInt();
+//
+//        if (num < min || num > max) {
+//            System.out.println("Wrong input. Please enter a # between 1 and 10.");
+//            num = factorial(1, 10);
+//        }
+//        int c = num
+//        System.out.println("factorial: " + num);
+//        return num;
+//
+//    }
 
 }; //End public class methodExercise
 
