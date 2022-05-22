@@ -17,9 +17,8 @@ public class MethodsExercise {
 //        division(9, 0); Error: Exception in thread "main" java.lang.ArithmeticException: / by zero
         System.out.println("Enter a number between 1 and 10: ");
         int userInput = getInteger(1, 10);
+        factorial();
 
-        System.out.println("Enter another number to factorialize between 1 and 10: ");
-//        int userInput = factorial(1, 10);
     }
 
 //TODO: Create four separate methods. Each will perform a different arithmetic operation.
@@ -81,20 +80,69 @@ public class MethodsExercise {
         System.out.println("userInput: " + userInput);
         return userInput;
     }
-//
-//    public static int factorial(int min, int max) {
-//        Scanner scanner = new Scanner(System.in);
-//        int num = scanner.nextInt();
-//
-//        if (num < min || num > max) {
-//            System.out.println("Wrong input. Please enter a # between 1 and 10.");
-//            num = factorial(1, 10);
-//        }
-//        int c = num
-//        System.out.println("factorial: " + num);
-//        return num;
-//
-//    }
+
+// TODO: Calculate the factorial of a number.
+    public static long factorial() {
+        Scanner sc = new Scanner(System.in);
+        long lastFact = 1;
+
+        //TODO: Prompt the user to enter an integer from 1 to 10.
+        System.out.println("Enter a number between 1 and 10: ");
+        int num = sc.nextInt();
+
+        //TODO: Assume that the user will enter an integer, but verify it’s between 1 and 10.
+        if (num > 10 || num < 1) {
+            System.out.println("Try again, Enter a number between 1 and 10: ");
+            num = sc.nextInt();
+        }
+
+        //TODO: Display the factorial of the number entered by the user.
+        System.out.println("Thanks, you picked: " + num);
+
+        //TODO: Ask if the user wants to continue. Continue only if the user agrees to.
+        System.out.println("Do you want to calculate the factorial of your number? (y/n)");
+        String userCont = sc.next();
+
+        if (userCont.equals("n")) {
+            System.out.println("fine, we're done.");
+            return lastFact;
+        }
+
+        //TODO: Use a for loop to calculate the factorial.
+        for (int i = num; i > 0; i--) {
+            lastFact *= i;
+            System.out.println("iteration: " + i + ", lastFact: " + lastFact);
+        }
+
+        System.out.println("!" + num + " = " +lastFact);
+        return lastFact;
+    } //End factorial method
+
+//TODO: Create an application that simulates dice rolling.
+    public static void diceRoll() {
+        Scanner sc = new Scanner(System.in);
+
+        //TODO: Ask the user to enter the number of sides for a pair of dice.
+        System.out.println("How many sides are on your dice?");
+        int sides = sc.nextInt();
+
+        //TODO: Prompt the user to roll the dice.
+        System.out.println("Great! Do you want to roll your pair of dice with " + sides + "sides? (y/n)");
+        String doRoll = sc.next();
+        if (doRoll.equals("n")) {
+            System.out.println("fine, keep your dice. bye.");
+
+        //TODO: "Roll" two n-sided dice, display the results of each, and then ask the user if
+        // he/she wants to roll the dice again. Use static methods to implement the method(s) that generate
+        // the random numbers. Use the .random method of the java.lang.Math class to generate random numbers.
+
+
+
+        }
+
+    }
+
+
 
 }; //End public class methodExercise
 
