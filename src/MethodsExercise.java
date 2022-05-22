@@ -18,7 +18,7 @@ public class MethodsExercise {
         System.out.println("Enter a number between 1 and 10: ");
         int userInput = getInteger(1, 10);
         factorial();
-        diceRoll();
+        diceGame();
 
     }
 
@@ -78,7 +78,7 @@ public class MethodsExercise {
             System.out.println("Wrong input. Please enter a # between 1 and 10.");
             userInput = getInteger(1, 10);
         }
-        System.out.println("userInput: " + userInput);
+        System.out.println("Your #: " + userInput + " is between 1 and 10.");
         return userInput;
     }
 
@@ -120,12 +120,13 @@ public class MethodsExercise {
     } //End factorial method
 
     //TODO: Create an application that simulates dice rolling.
-    public static void diceRoll() {
+    public static void diceGame() {
         Scanner sc = new Scanner(System.in);
 
         //TODO: Ask the user to enter the number of sides for a pair of dice.
         System.out.println("How many sides are on your dice?");
         int sides = sc.nextInt();
+
 
         //TODO: Prompt the user to roll the dice.
         System.out.println("Great! Do you want to roll your pair of dice with " + sides + " sides? (y/n)");
@@ -134,22 +135,34 @@ public class MethodsExercise {
             System.out.println("fine, keep your dice. bye.");
             return;
         }
-        //TODO: "Roll" two n-sided dice, display the results of each, and then ask the user if
-        // he/she wants to roll the dice again. Use static methods to implement the method(s) that generate
-        // the random numbers. Use the .random method of the java.lang.Math class to generate random numbers.
-        Random rand = new Random();
-        int upperbound = sides;
-        int dice1 = rand.nextInt(upperbound);
-        int dice2 = rand.nextInt(upperbound);
-        System.out.println("You rolled a " + dice1 + " and " + dice2);
+        diceGame(sides, doRoll);
+    }
 
-        System.out.println("Nice roll! Do you want to roll again? (y/n)");
-        doRoll = sc.next();
-        if (doRoll.equals("n")) {
-            System.out.println("fine, keep your dice. bye.");
-            return;
-        }
+    //TODO: "Roll" two n-sided dice, display the results of each, and then ask the user if
+    // he/she wants to roll the dice again. Use static methods to implement the method(s) that generate
+    // the random numbers. Use the .random method of the java.lang.Math class to generate random numbers.
+    public static void diceGame(int sides, String doRoll) {
+        Scanner sc = new Scanner(System.in);
+            Random rand = new Random();
 
+    // included a 2nd method to get a random variable using the Random() method
+    //        int upperbound = sides;
+    //        int dice1 = rand.nextInt(upperbound);
+    //        int dice2 = rand.nextInt(upperbound);
+
+            int dice1 = (int) Math.floor(Math.random()*(sides) + 1);
+            int dice2 = (int) Math.floor(Math.random()*(sides) + 1);
+            System.out.println("You rolled a " + dice1 + " and " + dice2);
+
+            System.out.println("Nice roll! Do you want to roll again? (y/n)");
+            doRoll = sc.next();
+            if (doRoll.equals("n")) {
+                System.out.println("fine, keep your dice. bye.");
+                return;
+        } else {
+                //Recursion with method overloading to roll until base case is met for exiting the game.
+                diceGame(sides, doRoll);
+            }
     }
 
 
