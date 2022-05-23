@@ -12,9 +12,15 @@ public class Practice {
 //
 //        System.out.println(changeMe);
 diceRoll();
+TernaryTester();
     } //end psvm
 
-
+public class TernaryTester {
+    public void main(String[] args) {
+        int x = 5;
+        System.out.println(x > 2 ? x < 4 ? 10 : 8 : 7);
+    }
+}
 
 // This doesn't have a return statement, it doesn't permanently change the variable.
     // this only reassigns the storage location as the s-String below w/in this method.
