@@ -4,6 +4,16 @@ import java.util.*;
 
 public class ArraysExercises {
 
+    //TODO: Let's create a method that returns the sum of all integers in an int array (nums)
+    public static int arraySum(int[] arry) {
+        int c = 0;
+        for (int i = 0; i < arry.length; i++) {
+            c += arry[i];
+        }
+        System.out.println("Sum of array elements is: " + c);
+        return c;
+    }
+
     public static void main(String[] args) {
 
         String[] practice = {"coffee", "water", "soda", "juice", "milk"};
@@ -16,6 +26,10 @@ public class ArraysExercises {
         System.out.println(dailySteps);
         System.out.println(Arrays.toString(dailySteps));
 
+        int[] testCase = {4, 5, 6, 7, 8, 9};
+            arraySum(testCase);
     } //end of psvm
+
+
 
 } //end of ArraysExercises Class
