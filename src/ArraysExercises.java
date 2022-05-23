@@ -1,6 +1,10 @@
 package src;
-import java.io.*;
+import java.util.Arrays.*;
 import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 
 public class ArraysExercises {
 
@@ -13,6 +17,26 @@ public class ArraysExercises {
         System.out.println("Sum of array elements is: " + c);
         return c;
     }
+
+    public static Person[] newPerson() {
+        Person derek = new Person("Derek");
+        Person cory = new Person("Cory");
+        Person joe = new Person("Joe");
+        Person[] group = {derek, cory, joe};
+        for (Person individual : group) {
+            System.out.println(individual.getName());
+        }
+        return addPerson(group, new Person("carlos"));
+    }
+
+    public static Person[] addPerson(Person[] array, Person another) {
+        Person[] newGroup = Arrays.copyOf(array, array.length + 1);
+        newGroup[array.length] = another;
+        for (Person individual : newGroup) {
+            System.out.print(individual.getName() + ", ");
+        }
+        return newGroup;
+    } // end addPerson method
 
     public static void main(String[] args) {
 
@@ -28,6 +52,15 @@ public class ArraysExercises {
 
         int[] testCase = {4, 5, 6, 7, 8, 9};
             arraySum(testCase);
+
+        //Array Basics
+        //Array.toString is necessary because sout prints the data location NOT the elements themselves
+        int[] numbers = {1, 2, 3, 4, 5};
+        System.out.println("basics: " + Arrays.toString(numbers));
+
+
+        newPerson();
+
     } //end of psvm
 
 
