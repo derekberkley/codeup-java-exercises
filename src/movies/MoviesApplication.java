@@ -2,11 +2,12 @@ package src.movies;
 import java.util.Scanner;
 import src.util.*;
 
+import static src.movies.Movie.output;
+import static src.util.Input.getInt;
+
 public class MoviesApplication {
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
+    public static void askUser(){
         System.out.println("What would you like to do?");
         System.out.println("");
         System.out.println("0 - exit");
@@ -17,8 +18,11 @@ public class MoviesApplication {
         System.out.println("5 - view movies in the sci-fi category");
         System.out.println("");
         System.out.print("Enter your choice:");
-        Input.getInt(0, 5);
-        int userInput = scanner.nextInt();
-        Movies.output(userInput);
+    }
+
+    public static void main(String[] args) {
+        askUser();
+        int choice = Input.getInt(0, 5);
+        output(choice);
     }
 }

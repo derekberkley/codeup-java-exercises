@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Input {
 
-    private static Scanner scanner;
+    public static Scanner scanner;
 //    String userInput = scanner.next();
 
     public Input() {
@@ -30,13 +30,14 @@ public class Input {
     }
 
     public static int getInt(int min, int max) {
-        int userInput = scanner.nextInt();
+        Scanner scan1 = new Scanner(System.in);
+        int userInput = scan1.nextInt();
 
         if (userInput < min || userInput > max) {
             System.out.println("Wrong input. Please enter a # between " + min + " and " + max);
             userInput = getInt(min, max);
         }
-        System.out.println("Your #: " + userInput + " is between " + min + " and " + max);
+//        System.out.println("Your #: " + userInput + " is between " + min + " and " + max);
         return userInput;
     }
 

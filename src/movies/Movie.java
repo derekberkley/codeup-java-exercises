@@ -1,6 +1,7 @@
 package src.movies;
 import src.movies.MoviesApplication;
 import src.Person;
+import src.util.Input;
 
 import java.util.Arrays;
 
@@ -36,52 +37,51 @@ public class Movie {
 
 
     public static void output(int num) {
+        Movie[] findit = MoviesArray.findAll();
         if (num == 0) {
             System.out.println("OK, have a nice day. bye.");
             return;
         } else if (num == 1) {
-            MoviesArray.findAll();
+            for (int i = 0; i < findit.length; i++) {
+                System.out.println(findit[i].toString());
+            }
         } else if (num == 2) {
-            Movie[] findit = MoviesArray.findAll();
                 for (int i = 0; i < findit.length; i++) {
                     if (findit[i].category.equals("animated")) {
                         System.out.println(findit[i].toString());
                     }
                 }
         } else if (num == 3) {
-            Movie[] findit = MoviesArray.findAll();
             for (int i = 0; i < findit.length; i++) {
                 if (findit[i].category.equals("drama")) {
                     System.out.println(findit[i].toString());
                 }
             }
         } else if (num == 4) {
-            Movie[] findit = MoviesArray.findAll();
             for (int i = 0; i < findit.length; i++) {
                 if (findit[i].category.equals("horror")) {
                     System.out.println(findit[i].toString());
                 }
             }
         } else if (num == 5) {
-            Movie[] findit = MoviesArray.findAll();
             for (int i = 0; i < findit.length; i++) {
                 if (findit[i].category.equals("scifi")) {
                     System.out.println(findit[i].toString());
                 }
             }
-//        } else {
-//            System.out.println("Please pick again.");
-//            //get input
-//            outpu(//pass input to output again
+        } else {
+            System.out.println("Not sure how we got here.");
         }
-
+        MoviesApplication.askUser();
+        int choice = Input.getInt(0, 5);
+        output(choice);
 
     } //end output method
 
 
 //
     public static void main(String[] args) {
-        output(2);
+
     } //end psvm
 
 } // end Movie class
