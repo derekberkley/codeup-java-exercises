@@ -33,10 +33,10 @@ public class Input {
         int userInput = scanner.nextInt();
 
         if (userInput < min || userInput > max) {
-            System.out.println("Wrong input. Please enter a # between 1 and 10.");
-            userInput = getInt(1, 10);
+            System.out.println("Wrong input. Please enter a # between " + min + " and " + max);
+            userInput = getInt(min, max);
         }
-        System.out.println("Your #: " + userInput + " is between 1 and 10.");
+        System.out.println("Your #: " + userInput + " is between " + min + " and " + max);
         return userInput;
     }
 
