@@ -1,11 +1,13 @@
 package src.shapes;
+import src.shapes.*;
 
 //TODO: Test your code by creating a new class, ShapesTest (also inside of shapes) with a main method.
 public class ShapesTest {
 
-//    public static void doArea(Rectangle x) {
-//        System.out.println(x.getArea());
-//    }
+    public static void morphinTime(Square x) {
+        x.getArea();
+        x.getPerimeter();
+    }
     public static void main(String[] args) {
 
     //TODO: create a variable of the type Rectangle named box1 and assign it a new instance of the
@@ -20,12 +22,13 @@ public class ShapesTest {
 
     //TODO: create a variable of the type Rectangle named box2 and assign it a new instance
     // of the Square class that has a side value of 5.
-
         Rectangle box2 = new Square();
-        box2.pickSides(5,5);
+        ((Square) box2).pickSide(5);
+
+
     //TODO: verify that the getPerimeter and getArea methods return 20 and 25, respectively.
-        doArea(box2);
-//        getPerimeter(box2);
+        morphinTime((Square) box2);
+
     } //end of psvm
 
 
