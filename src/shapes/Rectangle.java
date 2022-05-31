@@ -1,7 +1,14 @@
 package src.shapes;
 
-//TODO: Inside of your shapes directory, create a class named Rectangle.
+//TODO: Inside of your shapes directory, create a class named Rectangle. Change your existing Rectangle
+// class to inherit from Quadrilateral and implement Measurable.
+
 public class Rectangle extends Quadrilateral implements Measurable{
+
+    public Rectangle(double l, double w) {
+        super(l, w);
+    }
+
     @Override
     public double getPerimeter() {
         double peri = 2 * length + 2 * width;
@@ -15,6 +22,18 @@ public class Rectangle extends Quadrilateral implements Measurable{
         System.out.println("Area: " + area);
         return area;
     }
+
+    @Override
+    public double pickSide() {
+        return 0;
+    }
+
+    @Override
+    public void setSides(double newLength, double newWidth) {
+        this.length = newLength;
+        this.width = newWidth;
+    }
+
 
 //==============Inheritance and Polymorphism========================================
 //    //TODO: It should have protected properties for both length and width.
