@@ -12,11 +12,6 @@ public class Input {
         scanner = new Scanner(System.in);
     }
 
-    static String getString() {
-        String response = scanner.nextLine();
-        System.out.printf("word: %s", response);
-        return response;
-    }
 
     boolean yesNo() {
         String response = scanner.next();
@@ -29,34 +24,65 @@ public class Input {
         }
     }
 
+//    public static int alterString(String num) {
+//        int userMod = Integer.parseInt(num);
+//        System.out.println("userMod: " + userMod);
+//        return userMod;
+//    }
+
+    static String getString() {
+        String response = scanner.next();
+//        System.out.printf("word: %s", response);
+        return response;
+    }
+
     public static int getInt(int min, int max) {
-        Scanner scan1 = new Scanner(System.in);
-        int userInput = scan1.nextInt();
+//        Scanner scan1 = new Scanner(System.in);
+        int userInput = 0;
+        String s = getString();
+        try {
+            userInput = Integer.valueOf(s);
+        } catch (NumberFormatException e) {
+            System.out.println("woops, that isn't the format we are looking for.");
+            System.out.println("Enter an integer between 1 and 10: ");
+            return getInt(min, max);
+        }
 
         if (userInput < min || userInput > max) {
-            System.out.println("Wrong input. Please enter a # between " + min + " and " + max);
-            userInput = getInt(min, max);
+            System.out.println("Not in range of the min and max. Enter an integer between " + min + " and " + max);
+            getInt(min, max);
+        } else {
+            System.out.println("Your #: " + userInput + " is between " + min + " and " + max);
         }
-//        System.out.println("Your #: " + userInput + " is between " + min + " and " + max);
+
+
         return userInput;
     }
 
-//    int getInt() {}
 
 public static double getDouble(double min, double max) {
-    double userDecInput = scanner.nextDouble();
+//    double userDecInput = scanner.nextDouble();
+    double userDecInput = 0;
+    String s = getString();
+
+    try {
+        userDecInput = Double.valueOf(s);
+    } catch (NumberFormatException e) {
+        System.out.println("woops, that isn't the format we are looking for.");
+        System.out.println("Enter a double-typed number between 1 and 10: ");
+        return getDouble(min, max);
+    }
 
     if (userDecInput < min || userDecInput > max) {
-        System.out.println("Wrong input. Please enter a # between 1 and 10.");
-        userDecInput = getDouble(1, 10);
+        System.out.println("Wrong input. Please enter a double-typed number between 1 and 10.");
+        getDouble(1, 10);
+    } else {
+        System.out.println("Your double-typed number: " + userDecInput + " is between " + min + " and " + max);
     }
-    System.out.println("Your #: " + userDecInput + " is between 1 and 10.");
     return userDecInput;
 }
-//    double getDouble() {}
 
     public void main(String[] args) {
-
 
     }
 
