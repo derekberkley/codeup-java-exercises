@@ -12,10 +12,13 @@ public class Practice {
 //
 //        System.out.println(changeMe);
 //        diceRoll();
+        System.out.println("----------------");
         inDays(33);
         inDays(65);
+        System.out.println("----------------");
         doMath(3, "*", 4);
         doMath(18, "/", 3);
+        System.out.println("----------------");
         fizzBuzz();
 
     }

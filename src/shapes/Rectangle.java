@@ -1,71 +1,81 @@
 package src.shapes;
 
-//TODO: Inside of your shapes directory, create a class named Rectangle. Change your existing Rectangle
-// class to inherit from Quadrilateral and implement Measurable.
+//TODO: Inside of your shapes directory, create a class named Rectangle.
+
+// TODO: Change your existing Rectangle class to inherit from Quadrilateral and implement Measurable.
+//
 
 public class Rectangle extends Quadrilateral implements Measurable{
 
+    protected double rLength;
+    protected double rWidth;
+
     public Rectangle(double l, double w) {
         super(l, w);
+        rLength = l;
+        rWidth = w;
     }
 
     @Override
     public double getPerimeter() {
-        double peri = 2 * length + 2 * width;
-        System.out.println("Perimeter: " + peri);
+       double peri = 2 * rLength + 2 * rWidth;
+        System.out.println("Rectangle Perimeter: " + peri);
         return peri;
     }
 
     @Override
     public double getArea() {
-        double area = length * width;
-        System.out.println("Area: " + area);
+        double area = rLength * rWidth;
+        System.out.println("Rectangle Area: " + area);
         return area;
     }
 
     @Override
-    public double pickSide() {
-        return 0;
+    public void setLength(double qLength) {
+        this.rLength = qLength;
     }
 
     @Override
-    public void setSides(double newLength, double newWidth) {
-        this.length = newLength;
-        this.width = newWidth;
+    public void setWidth(double qWidth) {
+        this.rWidth = qWidth;
     }
 
 
-//==============Inheritance and Polymorphism========================================
+//TODO: Remove the code from the body of your Rectangle and Square classes.
+////Inheritance and Polymorphism =======================================
+//
 //    //TODO: It should have protected properties for both length and width.
-//    protected int length;
-//    protected int width;
+//    protected double rLength;
+//    protected double rWidth;
 //
-////TODO: Rectangle should define a constructor that accepts two numbers for length and width, and sets those properties.
-//    public void pickSides(int l, int w) {
-//        this.length = l;
-//        this.width = w;
-//    } //end pickSides constructor
+//    //TODO: Rectangle should define a constructor that accepts two numbers for length and width, and sets those properties.
+//    public Rectangle(double l, double w) {
+////        super(l, w);
+//        this.rLength = l;
+//        this.rWidth = w;
+//    }
 //
+//    public Rectangle(double s) {
+//        this.rLength = s;
+//        this.rWidth = s;
+//    }
 //
-////TODO: Create two methods on the Rectangle class, getArea and getPerimeter that return the respective values.
-//    public int getArea() {
-//        int area = length * width;
-//        System.out.println("Area: " + area);
+//    //TODO: Create two methods on the Rectangle class, getArea and getPerimeter that return the respective values.
+////    @Override
+//    public double getArea() {
+//        double area = rLength * rWidth;
+//        System.out.println("Rectangle Area: " + area);
 //        return area;
 //    }
 //
-//    public int getPerimeter() {
-//        int peri = 2 * length + 2 * width;
-//        System.out.println("Perimeter: " + peri);
+////    @Override
+//    public double getPerimeter() {
+//        double peri = 2 * rLength + 2 * rWidth;
+//        System.out.println("Rectangle Perimeter: " + peri);
 //        return peri;
 //    }
-//
-//    public static void main(String[] args) {
-//
-//
-//
-//
-//    } //end psvm
-//==============Inheritance and Polymorphism========================================
+////Inheritance and Polymorphism =======================================
+
+
 
 } // end Rectangle Class
