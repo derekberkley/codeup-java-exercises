@@ -18,6 +18,8 @@ public class ArraysExercises {
         return c;
     }
 
+//    TODO: Create an array that holds 3 Person objects. Assign a new instance of the Person class to each
+//     element. Iterate through the array and print out the name of each person in the array.
     public static Person[] newPerson() {
         Person derek = new Person("Derek");
         Person cory = new Person("Cory");
@@ -29,6 +31,9 @@ public class ArraysExercises {
         return addPerson(group, new Person("carlos"));
     }
 
+    //TODO: Create a static method named addPerson. It should accept an array of Person objects, as well as
+    // a single person object to add to the passed array. It should return an array whose length is 1 greater
+    // than the passed array, with the passed person object at the end of the array.
     public static Person[] addPerson(Person[] array, Person another) {
         Person[] newGroup = Arrays.copyOf(array, array.length + 1);
         newGroup[array.length] = another;
@@ -39,6 +44,12 @@ public class ArraysExercises {
     } // end addPerson method
 
     public static void main(String[] args) {
+
+        //TODO: What happens when you run the following code? Why is Arrays.toString necessary?
+        int[] numbers = {1, 2, 3, 4, 5};
+        System.out.println(numbers);
+        System.out.println("----------------------");
+        //Prints out the data location of the array and not the contents of the array
 
         String[] practice = {"coffee", "water", "soda", "juice", "milk"};
 
@@ -55,8 +66,8 @@ public class ArraysExercises {
 
         //Array Basics
         //Array.toString is necessary because sout prints the data location NOT the elements themselves
-        int[] numbers = {1, 2, 3, 4, 5};
-        System.out.println("basics: " + Arrays.toString(numbers));
+//        int[] numbers = {1, 2, 3, 4, 5};
+//        System.out.println("basics: " + Arrays.toString(numbers));
 
 
         newPerson();

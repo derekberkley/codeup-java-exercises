@@ -16,6 +16,7 @@ public class Practice {
         inDays(65);
         doMath(3, "*", 4);
         doMath(18, "/", 3);
+        fizzBuzz();
 
     }
 // This doesn't have a return statement, it doesn't permanently change the variable.
@@ -83,6 +84,20 @@ public class Practice {
         }
         System.out.println(x + " " + y + " " + z + " = " + result);
         return result;
+    }
+
+    public static void fizzBuzz() {
+        for (int i = 1; i <= 100; i++) {
+            if (i % 3 == 0 && i % 5 ==0) {
+                System.out.println("FizzBuzz");
+            } else if (i % 3 == 0) {
+                System.out.println("Fizz");
+            } else if (i % 5 == 0) {
+                System.out.println("Buzz");
+            } else {
+                System.out.println(i);
+            }
+        }
     }
 
 

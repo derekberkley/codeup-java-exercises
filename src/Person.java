@@ -14,16 +14,16 @@ public class Person {
 
     public String getName(){
     //TODO: return the person's name
-        return String.format("name: %s", name);
+        return name;
     }
 
     public void setName(String changeName){
     //TODO: change the name field to the passed value
-        name = changeName;
+        this.name = changeName;
     }
     public void sayHello(){
     //TODO: print a message to the console using the person's name
-        System.out.println("name changed to: " + name);
+        System.out.println("Hello, (changed name): " + name);
     }
 
 

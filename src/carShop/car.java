@@ -10,7 +10,6 @@ public class car extends Customer {
     private int year;
 
     //TODO: Create a constructor that sets the model, make, color, and year.
-
     public car(String fName, String lName, String model, String make, String color, int year) {
         super(fName, lName);
         this.model = model;
