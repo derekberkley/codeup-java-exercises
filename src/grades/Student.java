@@ -14,4 +14,30 @@ public class Student {
         this.name = name;
         this.grades = grades;
     }
-}
+
+    // returns the student's name
+    public String getName() {
+        System.out.println(name);
+        return name;
+    };
+
+    // adds the given grade to the grades property
+    public void addGrade(int grade) {
+        grades.add(grade);
+        System.out.println(grades);
+    };
+
+    // returns the average of the students grades
+    public double getGradeAverage() {
+        int sum = 0;
+        int result = 0;
+        for(int grade : grades) {
+            sum += grade;
+            result = sum / grades.size();
+        };
+        System.out.println("average: " + result);
+        return result;
+    };
+
+
+}// end Student Class
