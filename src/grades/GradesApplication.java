@@ -1,5 +1,5 @@
 package src.grades;
-
+import java.util.Scanner;
 import java.util.*;
 
 public class GradesApplication {
@@ -23,24 +23,30 @@ public class GradesApplication {
         }
         if (!verdict) {
             System.out.println("Sorry, no student found with that GitHub username can be found here.");
-            System.exit(0);
-//            System.out.println("Would you like to continue?");
-//            String response = scanner.nextLine();
-//            if (response.equalsIgnoreCase("y") || response.equalsIgnoreCase("yes")) {
-//                matchUser(students);
-//            } else {
-//                System.out.println("Goodbye");
-//                System.exit(0);
-//            }
+
+            System.out.println("Would you like to continue?");
+            String response = scanner.nextLine();
+            if (response.equalsIgnoreCase("y") || response.equalsIgnoreCase("yes")) {
+                matchUser(stds);
+            } else {
+                System.out.println("Goodbye");
+                System.exit(0);
+            }
         } else {
             Student holder = (Student) stds.get(getMe);
-            System.out.println("Name: " + names.get(0));
+            System.out.println("Name: " + holder.getName());
             System.out.println("GitHub Username: " + getMe );
-            System.out.println("Current GPA: ");
+            System.out.println("Current GPA: " + holder.getGradeAverage());
+        }
+        System.out.println("Would you like to continue?");
+        String response = scanner.nextLine();
+        if (response.equalsIgnoreCase("y") || response.equalsIgnoreCase("yes")) {
+            matchUser(stds);
+        } else {
+            System.out.println("Goodbye");
+            System.exit(0);
         }
     }
-
-
 
     public static void getStudentNames(HashMap x) {
         System.out.println("----------------");
@@ -78,6 +84,17 @@ public class GradesApplication {
 
             //TODO: The user should enter a GitHub username (i.e. one of the keys in your map).
             matchUser(students);
+
+//        System.out.println("Would you like to see another student? (y/n)");
+//        Scanner scanner = new Scanner(System.in);
+//        String userInput = scanner.nextLine();
+//        if(userInput.equalsIgnoreCase("y")) {
+//            getStudentNames(students);
+//            matchUser(students);
+//        } else {
+//            System.out.println(userInput);
+//            System.exit(0);
+//        }
 
         } //end psvm
 

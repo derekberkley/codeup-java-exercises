@@ -17,7 +17,7 @@ public class Student {
 
     // returns the student's name
     public String getName() {
-        System.out.println(name);
+//        System.out.println(name);
         return name;
     };
 
@@ -35,7 +35,7 @@ public class Student {
             sum += grade;
             result = sum / grades.size();
         };
-        System.out.println("average: " + result);
+//        System.out.println("average: " + result);
         return result;
     };
 
