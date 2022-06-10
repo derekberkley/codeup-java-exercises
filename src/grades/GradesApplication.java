@@ -37,6 +37,7 @@ public class GradesApplication {
             System.out.println("Name: " + holder.getName());
             System.out.println("GitHub Username: " + getMe );
             System.out.println("Current GPA: " + holder.getGradeAverage());
+            System.out.println();
         }
         System.out.println("Would you like to continue?");
         String response = scanner.nextLine();
